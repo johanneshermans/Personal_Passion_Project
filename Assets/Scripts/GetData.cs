@@ -3,17 +3,21 @@ using Proyecto26;
 using Newtonsoft.Json;
 using TMPro;
 using System.Collections.Generic;
+using System;
 
 public class GetData : MonoBehaviour
 {
-    private string url = "https://dev4-personal-blog-backend.herokuapp.com/infos";
+    private string url = "https://dev4-personal-blog-backend.herokuapp.com/songs";
+    private string newTarget;
 
     // Start is called before the first frame update
-    void Start()
+
+    public void DoRequest(string newTarget)
     {
+        Debug.Log("Ik ben hier");
+        Debug.Log(newTarget + "aangekomen");
+        url = "https://dev4-personal-blog-backend.herokuapp.com/songs";
         getAllData();
-
-
     }
 
     private void getAllData()
@@ -21,12 +25,12 @@ public class GetData : MonoBehaviour
         RestClient.Get(url).Then(
             response =>
             {
-                var res = JsonConvert.DeserializeObject(response.Text);
+                var res = JsonConvert.DeserializeObject<List<Song>>(response.Text);
                 Debug.Log(res);
-                //foreach (var hero in res)
-                //{
-                   // Debug.Log(hero);
-                //}
+                foreach (var song in res)
+                {
+                   Debug.Log(song.title);
+                }
             }, error => { Debug.Log("oops!"); });
     }
 
@@ -59,5 +63,7 @@ public class GetData : MonoBehaviour
             public string content_type;
             public string video_link;
         }
+        public string target;
     }
+
 }

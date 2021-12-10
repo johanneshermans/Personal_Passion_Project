@@ -12,7 +12,6 @@ public class LoadOnlineVideo : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        Debug.Log("run");
         videoPlayer.url = videoUrl;
         //videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
         //videoPlayer.EnableAudioTrack(0, true);

@@ -3,9 +3,11 @@ using Vuforia;
 
 public class SimpleCloudRecoEventHandler : MonoBehaviour
 {
+
     CloudRecoBehaviour mCloudRecoBehaviour;
     bool mIsScanning = false;
     string mTargetMetadata = "";
+    private GetData databaseFetch;
 
     public ImageTargetBehaviour ImageTargetTemplate;
 
@@ -67,7 +69,18 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour
         }
 
         // Store the target metadata
-        mTargetMetadata = cloudRecoSearchResult.MetaData;
+        string mTargetMetadata = cloudRecoSearchResult.MetaData;
+        Debug.Log(mTargetMetadata + "doorgeven");
+
+        if (mTargetMetadata != "")
+        {
+            Debug.Log("niet leeg");
+            databaseFetch.DoRequest("link");
+        } else
+        {
+            Debug.Log("empty");
+        }
+
 
         // Stop the scanning by disabling the behaviour
         mCloudRecoBehaviour.enabled = false;
