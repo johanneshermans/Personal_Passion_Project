@@ -2,6 +2,7 @@
 #     https://github.com/github/gitignore/blob/master/Unity.gitignore
 
 Library
+Packages
 UserSettings
 Temp
 obj
