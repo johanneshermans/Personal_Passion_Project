@@ -8,7 +8,6 @@ using System;
 public class GetData : MonoBehaviour
 {
     private string url = "https://dev4-personal-blog-backend.herokuapp.com/songs";
-    private string newTarget;
 
     // Start is called before the first frame update
 

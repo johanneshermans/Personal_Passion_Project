@@ -69,13 +69,14 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour
         }
 
         // Store the target metadata
-        string mTargetMetadata = cloudRecoSearchResult.MetaData;
-        Debug.Log(mTargetMetadata + "doorgeven");
+        mTargetMetadata = cloudRecoSearchResult.MetaData;
+
+        Debug.Log(mTargetMetadata);
 
         if (mTargetMetadata != "")
         {
             Debug.Log("niet leeg");
-            //databaseFetch.DoRequest("link");
+            databaseFetch.DoRequest(newTarget: mTargetMetadata);
         } else
         {
             Debug.Log("empty");
