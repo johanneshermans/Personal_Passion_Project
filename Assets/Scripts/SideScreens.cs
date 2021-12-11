@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Video;
 
 public class SideScreens : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class SideScreens : MonoBehaviour
     public string videoUrl = "https://res.cloudinary.com/dd04ardpv/video/upload/v1638311473/Avicii_-_Waiting_For_Love_ldfali.mp4";
     public TextMeshPro textMeshProRight;
     public TextMeshPro textMeshProLeft;
+    public VideoPlayer videoPlayerLeft;
+    public VideoPlayer videoPlayerRight;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +25,7 @@ public class SideScreens : MonoBehaviour
     {
         if (side == "left" && content == "video")
         {
-            ShowVideo("LeftScreen");
+            //ShowVideo();
             
         }
         else if (side == "left" && content == "text")
@@ -30,7 +34,7 @@ public class SideScreens : MonoBehaviour
         }
         else if (side == "right" && content == "video")
         {
-            ShowVideo("RightScreen");
+            ShowVideo();
         }
         else if (side == "right" && content == "text")
         {
@@ -40,14 +44,13 @@ public class SideScreens : MonoBehaviour
 
     }
 
-    void ShowVideo(string side)
+    public void ShowVideo()
     {
-        GameObject plane = GameObject.Find(side);
-        var videoPlayer = plane.AddComponent<UnityEngine.Video.VideoPlayer>();
-        videoPlayer.url = videoUrl;
-        videoPlayer.EnableAudioTrack(0, false);
-        videoPlayer.Prepare();
-        videoPlayer.Play();
+        videoPlayerLeft.url = videoUrl;
+        //videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+        videoPlayerLeft.EnableAudioTrack(0, true);
+        videoPlayerLeft.Prepare();
+        videoPlayerLeft.Play();
     }
 
     void ShowText(string side)
