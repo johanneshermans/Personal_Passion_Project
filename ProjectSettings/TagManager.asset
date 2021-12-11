@@ -16,6 +16,14 @@ TagManager:
   - Stage
   - Podium
   - Plane
+  - Moon
+  - Bow
+  - Brain
+  - BigPyro
+  - FloorOrganic
+  - Pyro1
+  - Pyro2
+  - Pyro3
   layers:
   - Default
   - TransparentFX

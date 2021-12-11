@@ -17,12 +17,13 @@ public class ControlStage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        SetTextures();
 
     }
 
     void SetTextures()
     {
+        Debug.Log("called");
         GameObject[] bigCubes = GameObject.FindGameObjectsWithTag("Bigcubes");
         GameObject[] normalCube = GameObject.FindGameObjectsWithTag("Normalcube");
         GameObject[] smallCube = GameObject.FindGameObjectsWithTag("Smallcube");
@@ -45,7 +46,7 @@ public class ControlStage : MonoBehaviour
 
         foreach (GameObject cube in normalCube)
         {
-            cube.GetComponent<MeshRenderer>().material = lava;
+            cube.GetComponent<MeshRenderer>().material = glossy;
         }
 
         foreach (GameObject cube in smallCube)
@@ -55,17 +56,17 @@ public class ControlStage : MonoBehaviour
 
         foreach (GameObject bol in bol1)
         {
-            bol.GetComponent<MeshRenderer>().material = muddy;
+            bol.GetComponent<Renderer>().material.color = new Color(255, 0, 0);
         }
 
         foreach (GameObject bol in bol2)
         {
-            bol.GetComponent<MeshRenderer>().material = paper;
+            bol.GetComponent<Renderer>().material.color = new Color(0, 255, 0);
         }
 
         foreach (GameObject bol in bol3)
         {
-            bol.GetComponent<MeshRenderer>().material = slime;
+            bol.GetComponent<Renderer>().material.color = new Color(0, 0, 255);
         }
     }
 

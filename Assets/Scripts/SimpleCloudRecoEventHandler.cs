@@ -75,7 +75,7 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour
         if (mTargetMetadata != "")
         {
             Debug.Log("niet leeg");
-            databaseFetch.DoRequest("link");
+            //databaseFetch.DoRequest("link");
         } else
         {
             Debug.Log("empty");

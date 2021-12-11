@@ -22,7 +22,7 @@ public class ManagePrefabs : MonoBehaviour
     public void start()
     {
         Worlds myWorlds;
-        myWorlds = Worlds.organic;
+        myWorlds = Worlds.vibes;
         ChangeWorlds(myWorlds);
     }
 
