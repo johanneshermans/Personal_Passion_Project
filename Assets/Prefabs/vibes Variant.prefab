@@ -1,0 +1,363 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &604931826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7339567493722718633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb392a88a294489495c8a52ebffdc58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hardwood: {fileID: 2100000, guid: 224af21a5b81b4e36b22f95cde401cee, type: 2}
+  glossy: {fileID: 2100000, guid: 3cdce276a94ec47e1824769eadb4ba10, type: 2}
+  lava: {fileID: 2100000, guid: 085e80541e2b94213817b2d3d0865153, type: 2}
+  metal: {fileID: 2100000, guid: c844241fd4db7476b98be4d1988b2c8e, type: 2}
+  muddy: {fileID: 2100000, guid: dba5aa3b8baaf4550811e973f6e24cfb, type: 2}
+  paper: {fileID: 2100000, guid: a0401c9ea4c20498490a12265a26ce31, type: 2}
+  slime: {fileID: 2100000, guid: a71801d7b5a5d45c2b985b14dd621e74, type: 2}
+  space: {fileID: 2100000, guid: 0d4a12e73629248d68f830c062e25e53, type: 2}
+  spaced: {fileID: 2100000, guid: 6e4c4fbcb8cc34ebab11991a6c3473bc, type: 2}
+--- !u!1001 &7573374993264147704
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -9192693121588759995, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8399507976538151787, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: ClockBolls
+      objectReference: {fileID: 0}
+    - target: {fileID: -8186119192464678352, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: ClockBolls
+      objectReference: {fileID: 0}
+    - target: {fileID: -8129835307492154318, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TreeLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: -8121170160418002479, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7203638474232869991, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: ClockBolls
+      objectReference: {fileID: 0}
+    - target: {fileID: -7066596472052637697, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6675314794838021361, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: ClockBolls
+      objectReference: {fileID: 0}
+    - target: {fileID: -6610288198022005840, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: FloorVibes
+      objectReference: {fileID: 0}
+    - target: {fileID: -6439985086064910186, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra3
+      objectReference: {fileID: 0}
+    - target: {fileID: -6062558716128331065, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crows
+      objectReference: {fileID: 0}
+    - target: {fileID: -5898375808853744277, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5545657856912896110, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: ClockBolls
+      objectReference: {fileID: 0}
+    - target: {fileID: -5445325564612004989, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TreeLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: -4953714712271405502, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4861107875780055453, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4620254346599843409, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: ClockBolls
+      objectReference: {fileID: 0}
+    - target: {fileID: -3859875076218834359, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3705706371973926497, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3530546977691526502, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3138231462400481554, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2140476520411015423, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2084800437219788043, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1972526357709441919, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TreeLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: -1156972411061879622, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1018664272722485354, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: MagicBall
+      objectReference: {fileID: 0}
+    - target: {fileID: -548337570385555557, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Spiral
+      objectReference: {fileID: 0}
+    - target: {fileID: -279661777688009362, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    - target: {fileID: 151977522293835762, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424536526331916545, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TreeLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 435127497067748512, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    - target: {fileID: 519411788400552832, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_Name
+      value: vibes Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594196286995702511, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421774683557663925, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581156233054028248, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2670581104398295856, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: ClockBolls
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632015938819776668, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018427908812732148, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: ClockBolls
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223543340823721863, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Spiral
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085062099072627061, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478150363491237866, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534455466101194725, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694003319322411514, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5830245831535106850, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828927681938874060, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7059911095965227367, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221294812702981895, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crows
+      objectReference: {fileID: 0}
+    - target: {fileID: 7241597020310019803, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Vibes
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362679795250940241, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814461852787336509, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TreeLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8033070281784815859, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: FloorVibes
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422436846859049161, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606310620127827912, guid: ac829a2595e164be0b6f8fc93de619d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pyra1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac829a2595e164be0b6f8fc93de619d7, type: 3}
+--- !u!1 &7339567493722718633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac829a2595e164be0b6f8fc93de619d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 7573374993264147704}
+  m_PrefabAsset: {fileID: 0}

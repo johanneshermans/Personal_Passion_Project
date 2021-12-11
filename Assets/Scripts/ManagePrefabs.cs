@@ -22,7 +22,7 @@ public class ManagePrefabs : MonoBehaviour
     public void start()
     {
         Worlds myWorlds;
-        myWorlds = Worlds.vibes;
+        myWorlds = Worlds.stage;
         ChangeWorlds(myWorlds);
     }
 
@@ -33,20 +33,17 @@ public class ManagePrefabs : MonoBehaviour
 
         if (world == Worlds.stage)
         {
-            Debug.Log("show Stage");
             currentObject = Instantiate(StageGameObject,gameObject.transform);
             currentWorld = Worlds.stage;
         }
         else if (world == Worlds.vibes)
         {
-            Debug.Log("show vibes");
             currentObject = Instantiate(VibesGameObject, gameObject.transform);
             currentWorld = Worlds.vibes;
 
         }
         else if (world == Worlds.organic)
         {
-            Debug.Log("show map");
             currentObject = Instantiate(OrganicGameObject,gameObject.transform);
             currentWorld = Worlds.organic;
         }

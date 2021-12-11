@@ -24,6 +24,16 @@ TagManager:
   - Pyro1
   - Pyro2
   - Pyro3
+  - FloorVibes
+  - ClockBolls
+  - Crows
+  - Vibes
+  - Spiral
+  - Pyra1
+  - Pyra2
+  - Pyra3
+  - MagicBall
+  - TreeLevel
   layers:
   - Default
   - TransparentFX
