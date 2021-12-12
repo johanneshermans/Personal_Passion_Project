@@ -7,7 +7,6 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour
     CloudRecoBehaviour mCloudRecoBehaviour;
     bool mIsScanning = false;
     string mTargetMetadata = "";
-    private GetData databaseFetch;
 
     public ImageTargetBehaviour ImageTargetTemplate;
 
@@ -75,8 +74,8 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour
 
         if (mTargetMetadata != "")
         {
-            Debug.Log("niet leeg");
-            databaseFetch.DoRequest(newTarget: mTargetMetadata);
+            Debug.Log(mTargetMetadata);
+            GetData.DoRequest(mTargetMetadata);
         } else
         {
             Debug.Log("empty");
