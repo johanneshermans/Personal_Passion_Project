@@ -8,24 +8,31 @@ public class SideScreens : MonoBehaviour
 {
     public string side = "left";
     public string content = "video";
-    public string videoUrl = "https://res.cloudinary.com/dd04ardpv/video/upload/v1638311473/Avicii_-_Waiting_For_Love_ldfali.mp4";
+    string videoUrl = "https://res.cloudinary.com/dd04ardpv/video/upload/v1639398447/y2meta.com-Avicii_-_Waiting_For_Love_Lyrics_-_1080p_dwdjf7.mp4";
     public TextMeshPro textMeshProRight;
     public TextMeshPro textMeshProLeft;
     public VideoPlayer videoPlayerLeft;
     public VideoPlayer videoPlayerRight;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        GetData.sideScreens = this;
+    }
+
+    public void GetParameters(string link)
+    {
+        Debug.Log("test");
+        Debug.Log(link + "juiste plaats");
         HandleScreen();
+
+        
     }
 
     void HandleScreen()
     {
         if (side == "left" && content == "video")
         {
-            //ShowVideo();
+            ShowVideo();
             
         }
         else if (side == "left" && content == "text")
@@ -46,9 +53,12 @@ public class SideScreens : MonoBehaviour
 
     public void ShowVideo()
     {
+        Debug.Log("komt hier");
+        Debug.Log(videoUrl);
         videoPlayerLeft.url = videoUrl;
         //videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
         videoPlayerLeft.EnableAudioTrack(0, true);
+        //videoPlayerLeft.SetDirectAudioMute(ushort, mute);
         videoPlayerLeft.Prepare();
         videoPlayerLeft.Play();
     }

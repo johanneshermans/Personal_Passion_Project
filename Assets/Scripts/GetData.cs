@@ -8,6 +8,7 @@ using System;
 static class GetData
 {
     static private string url = "https://dev4-personal-blog-backend.herokuapp.com/songs";
+    static public SideScreens sideScreens;
 
     // Start is called before the first frame update
 
@@ -22,11 +23,11 @@ static class GetData
         RestClient.Get(url).Then(
             response =>
             {
-                var res = JsonConvert.DeserializeObject<List<SongMetaData>>(response.Text);
+                var res = JsonConvert.DeserializeObject<List<Root>>(response.Text);
                 Debug.Log(res);
                 foreach (var song in res)
                 {
-                   Debug.Log(song.title);
+                    Debug.Log(song.artist);
                 }
             }, error => { Debug.Log("oops!"); });
     }

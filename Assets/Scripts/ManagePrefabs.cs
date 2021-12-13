@@ -22,6 +22,7 @@ public class ManagePrefabs : MonoBehaviour
     public void start()
     {
         Worlds myWorlds;
+    
         myWorlds = Worlds.stage;
         ChangeWorlds(myWorlds);
     }
