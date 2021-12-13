@@ -14,16 +14,9 @@ public class ControlStage : MonoBehaviour
     public Material slime;
     public Material space;
     public Material spaced;
-    // Start is called before the first frame update
-    void Start()
-    {
-        SetTextures();
 
-    }
-
-    void SetTextures()
+    public void SetTextures(Model model)
     {
-        Debug.Log("called");
         GameObject[] bigCubes = GameObject.FindGameObjectsWithTag("Bigcubes");
         GameObject[] normalCube = GameObject.FindGameObjectsWithTag("Normalcube");
         GameObject[] smallCube = GameObject.FindGameObjectsWithTag("Smallcube");
@@ -36,7 +29,7 @@ public class ControlStage : MonoBehaviour
         GameObject[] bol2 = GameObject.FindGameObjectsWithTag("Bol2");
         GameObject[] bol3 = GameObject.FindGameObjectsWithTag("Bol3");
 
-
+        Debug.Log(model.color1);
 
 
         foreach (GameObject cube in bigCubes)

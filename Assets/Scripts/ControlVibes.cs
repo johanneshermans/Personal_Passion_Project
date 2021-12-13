@@ -14,13 +14,9 @@ public class ControlVibes : MonoBehaviour
     public Material slime;
     public Material space;
     public Material spaced;
-    // Start is called before the first frame update
-    void Start()
-    {
-        SetTextures();
-    }
 
-    void SetTextures()
+
+    public void SetTextures(Model model)
     {
 
         GameObject[] floorVibes = GameObject.FindGameObjectsWithTag("FloorVibes");
@@ -33,6 +29,8 @@ public class ControlVibes : MonoBehaviour
         GameObject[] pyra3 = GameObject.FindGameObjectsWithTag("Pyra3");
         //GameObject magicBall = GameObject.FindGameObjectWithTag("MagicBall");
         GameObject[] treeLevel = GameObject.FindGameObjectsWithTag("TreeLevel");
+
+        Debug.Log(model.color1);
 
         foreach (GameObject floor in floorVibes)
         {

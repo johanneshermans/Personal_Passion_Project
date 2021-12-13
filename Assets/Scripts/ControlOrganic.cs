@@ -13,13 +13,9 @@ public class ControlOrganic : MonoBehaviour
     public Material slime;
     public Material space;
     public Material spaced;
-    // Start is called before the first frame update
-    void Start()
-    {
-        SetTextures();
-    }
 
-    void SetTextures()
+
+    public void SetTextures(Model model)
     {
         //GameObject moon = GameObject.FindGameObjectWithTag("Moon");
         GameObject[] bows = GameObject.FindGameObjectsWithTag("Bow");
@@ -31,7 +27,7 @@ public class ControlOrganic : MonoBehaviour
         GameObject[] pyro3 = GameObject.FindGameObjectsWithTag("Pyro3");
 
 
-
+        Debug.Log(model.color1);
 
         foreach (GameObject bow in bows)
         {

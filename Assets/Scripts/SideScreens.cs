@@ -6,9 +6,8 @@ using UnityEngine.Video;
 
 public class SideScreens : MonoBehaviour
 {
-    public string side = "left";
-    public string content = "video";
-    string videoUrl = "https://res.cloudinary.com/dd04ardpv/video/upload/v1639398447/y2meta.com-Avicii_-_Waiting_For_Love_Lyrics_-_1080p_dwdjf7.mp4";
+    //public string side = "left";
+    //public string content = "video";
     public TextMeshPro textMeshProRight;
     public TextMeshPro textMeshProLeft;
     public VideoPlayer videoPlayerLeft;
@@ -19,65 +18,44 @@ public class SideScreens : MonoBehaviour
         GetData.sideScreens = this;
     }
 
-    public void GetParameters(string link)
+    public void LeftScreen(string content, string link, string text)
     {
-        Debug.Log("test");
-        Debug.Log(link + "juiste plaats");
-        HandleScreen();
-
-        
+        if (content == "video")
+        {
+            ShowVideo(videoPlayerLeft, link);
+        } else if (content == "text")
+        {
+            ShowText(textMeshProLeft, text);
+        }
     }
 
-    void HandleScreen()
+    public void RightScreen(string content, string link, string text)
     {
-        if (side == "left" && content == "video")
+        if (content == "video")
         {
-            ShowVideo();
-            
+            ShowVideo(videoPlayerRight, link);
         }
-        else if (side == "left" && content == "text")
+        else if (content == "text")
         {
-            ShowText("left");
+            ShowText(textMeshProRight, text);
         }
-        else if (side == "right" && content == "video")
-        {
-            ShowVideo();
-        }
-        else if (side == "right" && content == "text")
-        {
-            ShowText("right");
-        }
-
-
     }
 
-    public void ShowVideo()
+
+    private void ShowVideo(VideoPlayer side, string link)
     {
-        Debug.Log("komt hier");
-        Debug.Log(videoUrl);
-        videoPlayerLeft.url = videoUrl;
+        side.url = link;
         //videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
-        videoPlayerLeft.EnableAudioTrack(0, true);
+        side.EnableAudioTrack(0, true);
         //videoPlayerLeft.SetDirectAudioMute(ushort, mute);
-        videoPlayerLeft.Prepare();
-        videoPlayerLeft.Play();
+        side.Prepare();
+        side.Play();
     }
 
-    void ShowText(string side)
+    private void ShowText(TextMeshPro side, string text)
     {
-        if (side == "right")
-        {
-            textMeshProRight.SetText("Avicii - Waiting for love");
-        }
-        if (side == "left")
-        {
-            textMeshProLeft.SetText("Avicii - Waiting for love");
-        }
+        Debug.Log(text);
+        side.SetText("Avicii - Waiting for love");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

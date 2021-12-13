@@ -287,7 +287,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 461388364}
-  videoUrl: 
 --- !u!4 &248299355
 Transform:
   m_ObjectHideFlags: 0
@@ -444,7 +443,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   side: left
   content: video
-  videoUrl: https://res.cloudinary.com/dd04ardpv/video/upload/v1638311473/Avicii_-_Waiting_For_Love_ldfali.mp4
   textMeshProRight: {fileID: 2026064530}
   textMeshProLeft: {fileID: 2026964725}
   videoPlayerLeft: {fileID: 958165560}
@@ -1428,49 +1426,6 @@ Transform:
   - {fileID: 958165559}
   - {fileID: 530967762}
   - {fileID: 135689827}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1932793724
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1932793726}
-  - component: {fileID: 1932793725}
-  m_Layer: 0
-  m_Name: FetchData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1932793725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1932793724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdef7ad8a80144d7da9f1d507cd5bf51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1932793726
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1932793724}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9297385, y: -1.7054126, z: 0.26404786}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

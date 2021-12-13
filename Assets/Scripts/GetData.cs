@@ -9,6 +9,8 @@ static class GetData
 {
     static private string url = "https://dev4-personal-blog-backend.herokuapp.com/songs";
     static public SideScreens sideScreens;
+    static public LoadOnlineVideo loadOnlineVideo;
+    static public ManagePrefabs managePrefabs;
 
     // Start is called before the first frame update
 
@@ -28,6 +30,11 @@ static class GetData
                 foreach (var song in res)
                 {
                     Debug.Log(song.artist);
+                    loadOnlineVideo.Play(song.videoclip_link);
+                    sideScreens.LeftScreen(song.screen_left.content_type, song.screen_left.video_link, song.info);
+                    sideScreens.RightScreen(song.screen_right.content_type, song.screen_left.video_link, song.info);
+                    managePrefabs.ChangeWorlds(song.model.sort, song.model);
+
                 }
             }, error => { Debug.Log("oops!"); });
     }

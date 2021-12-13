@@ -7,6 +7,9 @@ public class ManagePrefabs : MonoBehaviour
     [SerializeField] private GameObject StageGameObject;
     [SerializeField] private GameObject VibesGameObject;
     [SerializeField] private GameObject OrganicGameObject;
+    public ControlOrganic controlOrganic;
+    public ControlVibes controlVibes;
+    public ControlStage controlStage;
 
     public enum Worlds
         {
@@ -18,35 +21,34 @@ public class ManagePrefabs : MonoBehaviour
     private GameObject currentObject;
     private Worlds currentWorld;
 
-
-    public void start()
+    private void Start()
     {
-        Worlds myWorlds;
-    
-        myWorlds = Worlds.stage;
-        ChangeWorlds(myWorlds);
+        GetData.managePrefabs = this;
     }
 
-    private void ChangeWorlds(Worlds world)
+    public void ChangeWorlds(string model, Model world)
     {
-        if (world == currentWorld)
-            return;
+        //if (world == currentWorld)
+        //    return;
 
-        if (world == Worlds.stage)
+        if (model == "stage")
         {
             currentObject = Instantiate(StageGameObject,gameObject.transform);
             currentWorld = Worlds.stage;
+            controlStage.SetTextures(world);
         }
-        else if (world == Worlds.vibes)
+        else if (model == "vibes")
         {
             currentObject = Instantiate(VibesGameObject, gameObject.transform);
             currentWorld = Worlds.vibes;
+            controlVibes.SetTextures(world);
 
         }
-        else if (world == Worlds.organic)
+        else if (model == "organic")
         {
             currentObject = Instantiate(OrganicGameObject,gameObject.transform);
             currentWorld = Worlds.organic;
+            controlOrganic.SetTextures(world);
         }
     }
 
