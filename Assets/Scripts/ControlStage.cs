@@ -39,7 +39,7 @@ public class ControlStage : MonoBehaviour
 
         foreach (GameObject cube in normalCube)
         {
-            cube.GetComponent<MeshRenderer>().material = GetMaterial(model.tex2);
+            cube.GetComponent<MeshRenderer>().material = GetMaterial(model.tex1);
         }
 
         foreach (GameObject cube in smallCube)
@@ -99,9 +99,4 @@ public class ControlStage : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

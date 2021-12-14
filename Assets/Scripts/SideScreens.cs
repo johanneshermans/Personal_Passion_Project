@@ -45,7 +45,7 @@ public class SideScreens : MonoBehaviour
     private void ShowVideo(VideoPlayer side, string link)
     {
         side.url = link;
-        //videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+        //side.audioOutputMode = VideoAudioOutputMode.AudioSource;
         side.EnableAudioTrack(0, true);
         //videoPlayerLeft.SetDirectAudioMute(ushort, mute);
         side.Prepare();

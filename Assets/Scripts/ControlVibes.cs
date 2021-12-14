@@ -34,17 +34,17 @@ public class ControlVibes : MonoBehaviour
 
         foreach (GameObject floor in floorVibes)
         {
-            floor.GetComponent<MeshRenderer>().material = glossy;
+            floor.GetComponent<MeshRenderer>().material = GetMaterial(model.tex1);
         }
 
         foreach (GameObject bol in clockBolls)
         {
-            bol.GetComponent<MeshRenderer>().material = glossy;
+            bol.GetComponent<MeshRenderer>().material = GetMaterial(model.tex1);
         }
 
         foreach (GameObject crow in crows)
         {
-            crow.GetComponent<MeshRenderer>().material = metal;
+            crow.GetComponent<MeshRenderer>().material = GetMaterial(model.tex2);
         }
 
         foreach (GameObject spi in spiral)
@@ -73,9 +73,38 @@ public class ControlVibes : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    Material GetMaterial(string materialName)
     {
-        
+        switch (materialName)
+        {
+            case "hardwood":
+                return hardwood;
+
+            case "glossy":
+                return glossy;
+
+            case "lava":
+                return lava;
+
+            case "metal":
+                return metal;
+
+            case "muddy":
+                return muddy;
+
+            case "paper":
+                return paper;
+
+            case "slime":
+                return slime;
+
+            case "space":
+                return space;
+
+            case "spaced":
+                return spaced;
+        }
+        return default;
+
     }
 }

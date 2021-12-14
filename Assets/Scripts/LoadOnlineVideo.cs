@@ -18,7 +18,7 @@ public class LoadOnlineVideo : MonoBehaviour
     {
         videoUrl = link;
         videoPlayer.url = videoUrl;
-        //videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+        videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
         videoPlayer.EnableAudioTrack(0, true);
         videoPlayer.Prepare();
         videoPlayer.Play();
