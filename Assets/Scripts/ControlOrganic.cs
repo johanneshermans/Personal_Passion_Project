@@ -27,21 +27,21 @@ public class ControlOrganic : MonoBehaviour
         GameObject[] pyro3 = GameObject.FindGameObjectsWithTag("Pyro3");
 
 
-        Debug.Log(model.color1);
+        Debug.Log(model.tex1);
 
         foreach (GameObject bow in bows)
         {
-            bow.GetComponent<MeshRenderer>().material = glossy;
+            bow.GetComponent<MeshRenderer>().material = GetMaterial(model.tex1);
         }
 
         foreach (GameObject brai in brain)
         {
-            brai.GetComponent<MeshRenderer>().material = glossy;
+            brai.GetComponent<MeshRenderer>().material = GetMaterial(model.tex2);
         }
 
         foreach (GameObject floor in floorOrganic)
         {
-            floor.GetComponent<MeshRenderer>().material = metal;
+            floor.GetComponent<MeshRenderer>().material = GetMaterial(model.tex2);
         }
 
         foreach (GameObject cone in pyro1)
@@ -60,9 +60,38 @@ public class ControlOrganic : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    Material GetMaterial(string materialName)
     {
+        switch(materialName)
+        { case "hardwood":
+                return hardwood;
+
+            case "glossy":
+                return glossy;
+
+            case "lava":
+                return lava;
+
+            case "metal":
+                return metal;
+
+            case "muddy":
+                return muddy;
+
+            case "paper":
+                return paper;
+
+            case "slime":
+                return slime;
+
+            case "space":
+                return space;
+
+            case "spaced":
+                return spaced;
+        }
+        return default;
         
     }
+
 }

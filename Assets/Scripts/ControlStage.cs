@@ -34,17 +34,17 @@ public class ControlStage : MonoBehaviour
 
         foreach (GameObject cube in bigCubes)
         {
-            cube.GetComponent<MeshRenderer>().material = glossy;
+            cube.GetComponent<MeshRenderer>().material = GetMaterial(model.tex1);
         }
 
         foreach (GameObject cube in normalCube)
         {
-            cube.GetComponent<MeshRenderer>().material = glossy;
+            cube.GetComponent<MeshRenderer>().material = GetMaterial(model.tex2);
         }
 
         foreach (GameObject cube in smallCube)
         {
-            cube.GetComponent<MeshRenderer>().material = metal;
+            cube.GetComponent<MeshRenderer>().material = GetMaterial(model.tex2);
         }
 
         foreach (GameObject bol in bol1)
@@ -61,6 +61,41 @@ public class ControlStage : MonoBehaviour
         {
             bol.GetComponent<Renderer>().material.color = new Color(0, 0, 255);
         }
+    }
+
+    Material GetMaterial(string materialName)
+    {
+        switch (materialName)
+        {
+            case "hardwood":
+                return hardwood;
+
+            case "glossy":
+                return glossy;
+
+            case "lava":
+                return lava;
+
+            case "metal":
+                return metal;
+
+            case "muddy":
+                return muddy;
+
+            case "paper":
+                return paper;
+
+            case "slime":
+                return slime;
+
+            case "space":
+                return space;
+
+            case "spaced":
+                return spaced;
+        }
+        return default;
+
     }
 
 
