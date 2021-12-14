@@ -23,7 +23,7 @@ public class SideScreens : MonoBehaviour
         if (content == "video")
         {
             ShowVideo(videoPlayerLeft, link);
-        } else if (content == "text")
+        } else if (content == "info")
         {
             ShowText(textMeshProLeft, text);
         }
@@ -35,7 +35,7 @@ public class SideScreens : MonoBehaviour
         {
             ShowVideo(videoPlayerRight, link);
         }
-        else if (content == "text")
+        else if (content == "info")
         {
             ShowText(textMeshProRight, text);
         }
@@ -55,7 +55,7 @@ public class SideScreens : MonoBehaviour
     private void ShowText(TextMeshPro side, string text)
     {
         Debug.Log(text);
-        side.SetText("Avicii - Waiting for love");
+        side.SetText(text);
     }
 
 }
