@@ -15,9 +15,9 @@ public class ControlOrganic : MonoBehaviour
     public Material spaced;
 
 
-    public void SetTextures(Model model)
+    public void SetTextures(Model model, int bpm)
     {
-        //GameObject moon = GameObject.FindGameObjectWithTag("Moon");
+        GameObject moon = GameObject.FindGameObjectWithTag("Moon");
         GameObject[] bows = GameObject.FindGameObjectsWithTag("Bow");
         GameObject[] brain = GameObject.FindGameObjectsWithTag("Brain");
         //GameObject bigPyro = GameObject.FindGameObjectWithTag("BigPyro");
@@ -28,6 +28,7 @@ public class ControlOrganic : MonoBehaviour
 
 
         Debug.Log(model.tex1);
+        Rotate(moon, bpm);
 
         foreach (GameObject bow in bows)
         {
@@ -58,6 +59,11 @@ public class ControlOrganic : MonoBehaviour
         {
             cone.GetComponent<Renderer>().material.color = new Color(0, 0, 255);
         }
+    }
+
+    void Rotate(GameObject part, int bpm)
+    {
+        Debug.Log(bpm);
     }
 
     Material GetMaterial(string materialName)

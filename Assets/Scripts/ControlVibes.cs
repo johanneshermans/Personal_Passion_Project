@@ -16,7 +16,7 @@ public class ControlVibes : MonoBehaviour
     public Material spaced;
 
 
-    public void SetTextures(Model model)
+    public void SetTextures(Model model, int bpm)
     {
 
         GameObject[] floorVibes = GameObject.FindGameObjectsWithTag("FloorVibes");
@@ -30,8 +30,7 @@ public class ControlVibes : MonoBehaviour
         //GameObject magicBall = GameObject.FindGameObjectWithTag("MagicBall");
         GameObject[] treeLevel = GameObject.FindGameObjectsWithTag("TreeLevel");
 
-        Debug.Log(model.color1);
-
+        Debug.Log(floorVibes.Length);
         foreach (GameObject floor in floorVibes)
         {
             floor.GetComponent<MeshRenderer>().material = GetMaterial(model.tex1);
@@ -72,6 +71,23 @@ public class ControlVibes : MonoBehaviour
             tree.GetComponent<Renderer>().material.color = new Color(0, 0, 255);
         }
     }
+
+
+
+
+    //public void Update()
+    //{
+    //    Wiggle(magicBall, beatspm);
+    //}
+
+    //void Wiggle(GameObject part, int bpm)
+    //{
+    //    Vector3 mov = new Vector3(transform.position.x, Mathf.Sin(4 * Time.time) * 4, transform.position.z);
+    //    part.transform.position = mov;
+    //}
+
+
+
 
     Material GetMaterial(string materialName)
     {

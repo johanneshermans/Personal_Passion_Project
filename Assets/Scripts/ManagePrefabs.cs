@@ -24,9 +24,9 @@ public class ManagePrefabs : MonoBehaviour
     private void Start()
     {
         GetData.managePrefabs = this;
-    }
+     }
 
-    public void ChangeWorlds(string model, Model world)
+    public void ChangeWorlds(string model, Model world, int bpm)
     {
         //if (world == currentWorld)
         //    return;
@@ -41,14 +41,14 @@ public class ManagePrefabs : MonoBehaviour
         {
             currentObject = Instantiate(VibesGameObject, gameObject.transform);
             currentWorld = Worlds.vibes;
-            controlVibes.SetTextures(world);
+            controlVibes.SetTextures(world, bpm);
 
         }
         else if (model == "organic")
         {
             currentObject = Instantiate(OrganicGameObject,gameObject.transform);
             currentWorld = Worlds.organic;
-            controlOrganic.SetTextures(world);
+            controlOrganic.SetTextures(world, bpm);
         }
     }
 

@@ -33,7 +33,7 @@ static class GetData
                     loadOnlineVideo.Play(song.videoclip_link);
                     sideScreens.LeftScreen(song.screen_left.content_type, song.screen_left.video_link, song.info);
                     sideScreens.RightScreen(song.screen_right.content_type, song.screen_left.video_link, song.info);
-                    managePrefabs.ChangeWorlds(song.model.sort, song.model);
+                    managePrefabs.ChangeWorlds(song.model.sort, song.model, song.bpm);
 
                 }
             }, error => { Debug.Log("oops!"); });
