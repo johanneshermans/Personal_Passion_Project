@@ -74,21 +74,6 @@ public class ControlVibes : MonoBehaviour
 
 
 
-
-    //public void Update()
-    //{
-    //    Wiggle(magicBall, beatspm);
-    //}
-
-    //void Wiggle(GameObject part, int bpm)
-    //{
-    //    Vector3 mov = new Vector3(transform.position.x, Mathf.Sin(4 * Time.time) * 4, transform.position.z);
-    //    part.transform.position = mov;
-    //}
-
-
-
-
     Material GetMaterial(string materialName)
     {
         switch (materialName)
