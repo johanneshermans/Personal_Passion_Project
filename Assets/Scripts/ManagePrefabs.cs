@@ -19,17 +19,21 @@ public class ManagePrefabs : MonoBehaviour
             organic
         }
     private GameObject currentObject;
-    private Worlds currentWorld;
+    private Worlds currentWorld = Worlds.none;
 
     private void Start()
     {
         GetData.managePrefabs = this;
      }
-
+     
     public void ChangeWorlds(string model, Model world, int bpm)
     {
-        //if (world == currentWorld)
-        //    return;
+        if (model == currentWorld.ToString())
+        {
+            return;
+        }
+
+        Destroy(currentObject);
 
         if (model == "stage")
         {
@@ -50,6 +54,12 @@ public class ManagePrefabs : MonoBehaviour
             currentWorld = Worlds.organic;
             controlOrganic.SetTextures(world, bpm);
         }
+    }
+
+    public void Reset()
+    {
+        Debug.Log("Reset model");
+        Destroy(currentObject);
     }
 
 }

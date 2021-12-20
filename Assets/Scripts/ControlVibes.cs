@@ -1,20 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(MaterialSelector))]
 public class ControlVibes : MonoBehaviour
 {
-
-    public Material hardwood;
-    public Material glossy;
-    public Material lava;
-    public Material metal;
-    public Material muddy;
-    public Material paper;
-    public Material slime;
-    public Material space;
-    public Material spaced;
-
+    private MaterialSelector matSelector;
+    void Start()
+    {
+        matSelector = FindObjectOfType<MaterialSelector>();
+        if (!matSelector)
+        {
+            Exception exception = new Exception("No materialSelector found");
+            Debug.LogException(exception);
+        }
+    }
 
     public void SetTextures(Model model, int bpm)
     {
@@ -33,17 +34,17 @@ public class ControlVibes : MonoBehaviour
         Debug.Log(floorVibes.Length);
         foreach (GameObject floor in floorVibes)
         {
-            floor.GetComponent<MeshRenderer>().material = GetMaterial(model.tex1);
+            floor.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex1);
         }
 
         foreach (GameObject bol in clockBolls)
         {
-            bol.GetComponent<MeshRenderer>().material = GetMaterial(model.tex1);
+            bol.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex1);
         }
 
         foreach (GameObject crow in crows)
         {
-            crow.GetComponent<MeshRenderer>().material = GetMaterial(model.tex2);
+            crow.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex2);
         }
 
         foreach (GameObject spi in spiral)
@@ -70,42 +71,5 @@ public class ControlVibes : MonoBehaviour
         {
             tree.GetComponent<Renderer>().material.color = new Color(0, 0, 255);
         }
-    }
-
-
-
-    Material GetMaterial(string materialName)
-    {
-        switch (materialName)
-        {
-            case "hardwood":
-                return hardwood;
-
-            case "glossy":
-                return glossy;
-
-            case "lava":
-                return lava;
-
-            case "metal":
-                return metal;
-
-            case "muddy":
-                return muddy;
-
-            case "paper":
-                return paper;
-
-            case "slime":
-                return slime;
-
-            case "space":
-                return space;
-
-            case "spaced":
-                return spaced;
-        }
-        return default;
-
     }
 }

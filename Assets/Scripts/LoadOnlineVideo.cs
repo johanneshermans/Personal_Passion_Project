@@ -12,6 +12,8 @@ public class LoadOnlineVideo : MonoBehaviour
     private void Start()
     {
         GetData.loadOnlineVideo = this;
+        videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+        videoPlayer.EnableAudioTrack(0, true);
     }
 
     public void Play(string link)
@@ -19,9 +21,15 @@ public class LoadOnlineVideo : MonoBehaviour
         videoUrl = link;
         videoPlayer.url = videoUrl;
         videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
-        videoPlayer.EnableAudioTrack(0, true);
         videoPlayer.Prepare();
         videoPlayer.Play();
+    }
+
+    public void Stop()
+    {
+        Debug.Log("Reset Video");
+        videoPlayer.Stop();
+        videoUrl = "";
     }
 
 }

@@ -3,17 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(MaterialSelector))]
 public class ControlStage : MonoBehaviour
 {
-    public Material hardwood;
-    public Material glossy;
-    public Material lava;
-    public Material metal;
-    public Material muddy;
-    public Material paper;
-    public Material slime;
-    public Material space;
-    public Material spaced;
+    private MaterialSelector matSelector;
+
+    void Start()
+    {
+       matSelector = FindObjectOfType<MaterialSelector>();
+        if (!matSelector)
+        {
+            Exception exception = new Exception ( "No materialSelector found");
+            Debug.LogException(exception);
+        }
+    }
 
     public void SetTextures(Model model)
     {
@@ -34,17 +37,17 @@ public class ControlStage : MonoBehaviour
 
         foreach (GameObject cube in bigCubes)
         {
-            cube.GetComponent<MeshRenderer>().material = GetMaterial(model.tex1);
+            cube.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex1);
         }
 
         foreach (GameObject cube in normalCube)
         {
-            cube.GetComponent<MeshRenderer>().material = GetMaterial(model.tex1);
+            cube.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex1);
         }
 
         foreach (GameObject cube in smallCube)
         {
-            cube.GetComponent<MeshRenderer>().material = GetMaterial(model.tex2);
+            cube.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex2);
         }
 
         foreach (GameObject bol in bol1)
@@ -63,40 +66,7 @@ public class ControlStage : MonoBehaviour
         }
     }
 
-    Material GetMaterial(string materialName)
-    {
-        switch (materialName)
-        {
-            case "hardwood":
-                return hardwood;
-
-            case "glossy":
-                return glossy;
-
-            case "lava":
-                return lava;
-
-            case "metal":
-                return metal;
-
-            case "muddy":
-                return muddy;
-
-            case "paper":
-                return paper;
-
-            case "slime":
-                return slime;
-
-            case "space":
-                return space;
-
-            case "spaced":
-                return spaced;
-        }
-        return default;
-
-    }
+   
 
 
 }

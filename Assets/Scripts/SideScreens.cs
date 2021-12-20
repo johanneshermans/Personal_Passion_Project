@@ -16,7 +16,7 @@ public class SideScreens : MonoBehaviour
     private void Start()
     {
         GetData.sideScreens = this;
-    }
+    } 
 
     public void LeftScreen(string content, string link, string text)
     {
@@ -58,4 +58,13 @@ public class SideScreens : MonoBehaviour
         side.SetText(text);
     }
 
+
+    public void Stop()
+    {
+        Debug.Log("Reset Screens");
+        textMeshProRight.text = "";
+        textMeshProLeft.text = "";
+        videoPlayerLeft.Stop();
+        videoPlayerRight.Stop();
+    }
 }

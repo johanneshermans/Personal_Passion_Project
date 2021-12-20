@@ -11,9 +11,9 @@ static class GetData
     static public SideScreens sideScreens;
     static public LoadOnlineVideo loadOnlineVideo;
     static public ManagePrefabs managePrefabs;
+    static public SimpleCloudRecoEventHandler cloudReco;
 
     // Start is called before the first frame update
-
     static public void DoRequest(string newTarget)
     {
         url = "https://dev4-personal-blog-backend.herokuapp.com/songs?target=" + newTarget;
@@ -39,4 +39,12 @@ static class GetData
             }, error => { Debug.Log("oops!"); });
     }
 
+
+    static public void Reset()
+    {
+        cloudReco.Reset();
+        sideScreens.Stop();
+        loadOnlineVideo.Stop();
+        managePrefabs.Reset();
+    }
 }
