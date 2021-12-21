@@ -14,8 +14,10 @@ public class MaterialSelector : MonoBehaviour {
     public Material space;
     public Material spaced;
     public Material standard;
+
     public Material GetMaterial(string materialName)
     {
+        Debug.Log(materialName);
         switch (materialName)
         {
             case "hardwood":

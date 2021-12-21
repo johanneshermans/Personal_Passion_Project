@@ -16,6 +16,7 @@ public class ControlVibes : MonoBehaviour
             Exception exception = new Exception("No materialSelector found");
             Debug.LogException(exception);
         }
+        getNewColor = new ChangeColor();
     }
 
     public void SetTextures(Model model)

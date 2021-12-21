@@ -28,13 +28,14 @@ public class ManagePrefabs : MonoBehaviour
      
     public void ChangeWorlds(string model, Model world)
     {
+        
         if (model == currentWorld.ToString())
         {
             return;
         }
 
         Destroy(currentObject);
-
+       
         if (model == "stage")
         {
             currentObject = Instantiate(StageGameObject,gameObject.transform);
@@ -46,6 +47,8 @@ public class ManagePrefabs : MonoBehaviour
             currentObject = Instantiate(VibesGameObject, gameObject.transform);
             currentWorld = Worlds.vibes;
             controlVibes.SetTextures(world);
+            Debug.Log("4");
+
 
         }
         else if (model == "organic")
