@@ -31,9 +31,9 @@ static class GetData
                 {
                     Debug.Log(song.artist);
                     loadOnlineVideo.Play(song.videoclip_link);
-                    sideScreens.LeftScreen(song.screen_left.content_type, song.screen_left.video_link, song.info);
-                    sideScreens.RightScreen(song.screen_right.content_type, song.screen_left.video_link, song.info);
-                    managePrefabs.ChangeWorlds(song.model.sort, song.model, song.bpm);
+                    sideScreens.LeftScreen(song.screen_left.content_type, song.screen_left.video_link, song.screen_left.info);
+                    sideScreens.RightScreen(song.screen_right.content_type, song.screen_left.video_link, song.screen_right.info);
+                    managePrefabs.ChangeWorlds(song.model.sort, song.model);
 
                 }
             }, error => { Debug.Log("oops!"); });

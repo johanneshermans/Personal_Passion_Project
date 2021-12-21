@@ -7,9 +7,6 @@ using UnityEngine.UI;
 [RequireComponent (typeof (Button))]
 public class RestartButton : MonoBehaviour
 {
-    
-    GUIContent content;
-    GUIStyle style = new GUIStyle();
    // [SerializeField] private LoadOnlineVideo currentVideoClip;
     private Button button;
 

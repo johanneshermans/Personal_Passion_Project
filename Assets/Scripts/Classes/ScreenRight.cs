@@ -3,4 +3,5 @@
         public int id { get; set; }
         public string content_type { get; set; }
         public object video_link { get; set; }
-    }
+        public string info { get; set; }
+}

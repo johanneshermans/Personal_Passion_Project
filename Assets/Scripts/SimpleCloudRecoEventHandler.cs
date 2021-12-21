@@ -82,6 +82,7 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour
 
     public void Reset()
     {
+        mCloudRecoBehaviour.enabled = true;
         mTargetMetadata = "";
         Debug.Log("Reset CloudReco");
     }

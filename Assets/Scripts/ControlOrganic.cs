@@ -7,6 +7,7 @@ using UnityEngine;
 public class ControlOrganic : MonoBehaviour
 {
     private MaterialSelector matSelector;
+    private ChangeColor getNewColor;
 
     void Start()
     {
@@ -18,55 +19,51 @@ public class ControlOrganic : MonoBehaviour
         }
     }
 
-    public void SetTextures(Model model, int bpm)
+    public void SetTextures(Model model)
     {
         GameObject moon = GameObject.FindGameObjectWithTag("Moon");
         GameObject[] bows = GameObject.FindGameObjectsWithTag("Bow");
         GameObject[] brain = GameObject.FindGameObjectsWithTag("Brain");
-        //GameObject bigPyro = GameObject.FindGameObjectWithTag("BigPyro");
+        GameObject bigPyro = GameObject.FindGameObjectWithTag("BigPyro");
         GameObject[] floorOrganic = GameObject.FindGameObjectsWithTag("FloorOrganic");
         GameObject[] pyro1 = GameObject.FindGameObjectsWithTag("Pyro1");
         GameObject[] pyro2 = GameObject.FindGameObjectsWithTag("Pyro2");
         GameObject[] pyro3 = GameObject.FindGameObjectsWithTag("Pyro3");
+        Color color1 = getNewColor.ReturnColor(model.color1);
+        Color color2 = getNewColor.ReturnColor(model.color2);
+        Color color3 = getNewColor.ReturnColor(model.color3);
 
 
-        Debug.Log(model.tex1);
-        Rotate(moon, bpm);
-
+        moon.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex3);
+        bigPyro.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex1);
         foreach (GameObject bow in bows)
         {
-            bow.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex1);
+            bow.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex2);
         }
 
         foreach (GameObject brai in brain)
         {
-            brai.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex2);
+            brai.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex3);
         }
 
         foreach (GameObject floor in floorOrganic)
         {
-            floor.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex2);
+            floor.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex1);
         }
 
         foreach (GameObject cone in pyro1)
         {
-            cone.GetComponent<Renderer>().material.color = new Color(255, 0, 0);
+            cone.GetComponent<Renderer>().material.color = color1;
         }
 
         foreach (GameObject cone in pyro2)
         {
-            cone.GetComponent<Renderer>().material.color = new Color(0, 255, 0);
+            cone.GetComponent<Renderer>().material.color = color2;
         }
 
         foreach (GameObject cone in pyro3)
         {
-            cone.GetComponent<Renderer>().material.color = new Color(0, 0, 255);
+            cone.GetComponent<Renderer>().material.color = color3;
         }
     }
-
-    void Rotate(GameObject part, int bpm)
-    {
-        Debug.Log(bpm);
-    }
-
 }
