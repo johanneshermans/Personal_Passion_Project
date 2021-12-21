@@ -27,9 +27,10 @@ public class ControlStage : MonoBehaviour
         GameObject[] smallCube = GameObject.FindGameObjectsWithTag("Smallcube");
         GameObject topring = GameObject.FindGameObjectWithTag("Topring");
         GameObject top = GameObject.FindGameObjectWithTag("Top");
-        GameObject stage = GameObject.FindGameObjectWithTag("Stage");
+        GameObject[] stages = GameObject.FindGameObjectsWithTag("Stage");
         GameObject plane = GameObject.FindGameObjectWithTag("Plane");
         GameObject podium = GameObject.FindGameObjectWithTag("Podium");
+        GameObject headCube = GameObject.FindGameObjectWithTag("Headcube");
         GameObject[] bol1 = GameObject.FindGameObjectsWithTag("Bol1");
         GameObject[] bol2 = GameObject.FindGameObjectsWithTag("Bol2");
         GameObject[] bol3 = GameObject.FindGameObjectsWithTag("Bol3");
@@ -37,19 +38,23 @@ public class ControlStage : MonoBehaviour
         Color color2 = getNewColor.ReturnColor(model.color2);
         Color color3 = getNewColor.ReturnColor(model.color3);
 
-        Debug.Log(model.color1);
-
 
         topring.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex3);
         top.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex3);
-        stage.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex3);
+        
         plane.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex1);
         podium.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex1);
+        headCube.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex3);
 
 
         foreach (GameObject cube in bigCubes)
         {
             cube.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex2);
+        }
+
+        foreach (GameObject stage in stages )
+        {
+            stage.GetComponent<MeshRenderer>().material = matSelector.GetMaterial(model.tex3);
         }
 
         foreach (GameObject cube in normalCube)
